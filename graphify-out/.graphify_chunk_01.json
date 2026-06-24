@@ -1,0 +1,1432 @@
+{
+  "nodes": [
+    {
+      "id": "memory_project",
+      "label": "Project Memory Block",
+      "file_type": "document",
+      "source_file": ".opencode/memory/project.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_ai-engineer",
+      "label": "AI Engineer",
+      "file_type": "document",
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_ai-writing-auditor",
+      "label": "AI Writing Auditor",
+      "file_type": "document",
+      "source_file": "agents/ai-writing-auditor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_backend-specialist",
+      "label": "Backend Specialist",
+      "file_type": "document",
+      "source_file": "agents/backend-specialist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_assumption-mapping",
+      "label": "Assumption Mapping",
+      "file_type": "document",
+      "source_file": "agents/business/assumption-mapping.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_backlog-grooming",
+      "label": "Backlog Grooming",
+      "file_type": "document",
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_business-analyst",
+      "label": "Business Analyst",
+      "file_type": "document",
+      "source_file": "agents/business/business-analyst.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_content-marketer",
+      "label": "Content Marketer",
+      "file_type": "document",
+      "source_file": "agents/business/content-marketer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_content-quality-editor",
+      "label": "Content Quality Editor",
+      "file_type": "document",
+      "source_file": "agents/business/content-quality-editor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_customer-success-manager",
+      "label": "Customer Success Manager",
+      "file_type": "document",
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_growth-loops",
+      "label": "Growth Loops",
+      "file_type": "document",
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_legal-advisor",
+      "label": "Legal Advisor",
+      "file_type": "document",
+      "source_file": "agents/business/legal-advisor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_license-engineer",
+      "label": "License Engineer",
+      "file_type": "document",
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_product-manager",
+      "label": "Product Manager",
+      "file_type": "document",
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_project-manager",
+      "label": "Project Manager",
+      "file_type": "document",
+      "source_file": "agents/business/project-manager.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_sales-engineer",
+      "label": "Sales Engineer",
+      "file_type": "document",
+      "source_file": "agents/business/sales-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_scrum-master",
+      "label": "Scrum Master",
+      "file_type": "document",
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_technical-writer",
+      "label": "Technical Writer",
+      "file_type": "document",
+      "source_file": "agents/business/technical-writer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_ux-researcher",
+      "label": "UX Researcher",
+      "file_type": "document",
+      "source_file": "agents/business/ux-researcher.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "business_wordpress-master",
+      "label": "WordPress Master",
+      "file_type": "document",
+      "source_file": "agents/business/wordpress-master.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_code-archaeologist",
+      "label": "Code Archaeologist",
+      "file_type": "document",
+      "source_file": "agents/code-archaeologist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_code-reveiw",
+      "label": "Code Reviewer",
+      "file_type": "document",
+      "source_file": "agents/code-reveiw.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_vubf_framework",
+      "label": "VUBF Risk Framework",
+      "file_type": "concept",
+      "source_file": "agents/business/assumption-mapping.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_rag_systems",
+      "label": "Advanced RAG Systems",
+      "file_type": "concept",
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_agent_frameworks",
+      "label": "Agent Frameworks and Orchestration",
+      "file_type": "concept",
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_vector_search",
+      "label": "Vector Search and Embeddings",
+      "file_type": "concept",
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_strangler_fig_pattern",
+      "label": "Strangler Fig Pattern",
+      "file_type": "rationale",
+      "source_file": "agents/code-archaeologist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_chestertons_fence",
+      "label": "Chesterton's Fence Principle",
+      "file_type": "rationale",
+      "source_file": "agents/code-archaeologist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_solid_principles",
+      "label": "SOLID Principles",
+      "file_type": "concept",
+      "source_file": "agents/code-reveiw.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_growth_loop_design",
+      "label": "Growth Loop Design",
+      "file_type": "concept",
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_viral_coefficient",
+      "label": "Viral Coefficient (K)",
+      "file_type": "concept",
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_license_frameworks",
+      "label": "Software License Frameworks",
+      "file_type": "concept",
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_product_frameworks",
+      "label": "Product Management Frameworks",
+      "file_type": "concept",
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_scaling_frameworks",
+      "label": "Agile Scaling Frameworks",
+      "file_type": "concept",
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_planning_poker",
+      "label": "Planning Poker Estimation",
+      "file_type": "concept",
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_ai_writing_detection",
+      "label": "AI Writing Pattern Detection",
+      "file_type": "concept",
+      "source_file": "agents/ai-writing-auditor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_layered_architecture",
+      "label": "Layered Architecture (Controller-Service-Repository)",
+      "file_type": "rationale",
+      "source_file": "agents/backend-specialist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_best_practices_code",
+      "label": "Code Best Practices (DRY/KISS/YAGNI)",
+      "file_type": "concept",
+      "source_file": "agents/code-reveiw.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_unslop_tool",
+      "label": "unslop CLI Tool",
+      "file_type": "concept",
+      "source_file": "agents/business/content-quality-editor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_definition_of_ready",
+      "label": "Definition of Ready (Backlog)",
+      "file_type": "concept",
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_quality_gates_content",
+      "label": "Content Quality Gates",
+      "file_type": "concept",
+      "source_file": "agents/business/content-quality-editor.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents_ai-writing-auditor",
+      "target": "agents_code-reveiw",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/ai-writing-auditor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_assumption-mapping",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/assumption-mapping.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_assumption-mapping",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/assumption-mapping.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_backlog-grooming",
+      "target": "business_scrum-master",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_backlog-grooming",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_backlog-grooming",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_backlog-grooming",
+      "target": "business_project-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_business-analyst",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/business-analyst.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_business-analyst",
+      "target": "business_project-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/business-analyst.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_business-analyst",
+      "target": "business_technical-writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/business-analyst.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_business-analyst",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/business-analyst.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_business-analyst",
+      "target": "business_scrum-master",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/business-analyst.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_content-marketer",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/content-marketer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_content-marketer",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/content-marketer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_sales-engineer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_technical-writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_content-marketer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_project-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_growth-loops",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_growth-loops",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_growth-loops",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_growth-loops",
+      "target": "business_content-marketer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_legal-advisor",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/legal-advisor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_legal-advisor",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/legal-advisor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_legal-advisor",
+      "target": "business_technical-writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/legal-advisor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_license-engineer",
+      "target": "business_legal-advisor",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_license-engineer",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_license-engineer",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_license-engineer",
+      "target": "business_technical-writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_license-engineer",
+      "target": "business_project-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_product-manager",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_product-manager",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_product-manager",
+      "target": "business_sales-engineer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_product-manager",
+      "target": "business_customer-success-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_product-manager",
+      "target": "business_scrum-master",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_project-manager",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/project-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_project-manager",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/project-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_project-manager",
+      "target": "business_scrum-master",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/project-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_sales-engineer",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/sales-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_sales-engineer",
+      "target": "business_customer-success-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/sales-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_sales-engineer",
+      "target": "business_technical-writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/sales-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_sales-engineer",
+      "target": "business_project-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/sales-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_scrum-master",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_scrum-master",
+      "target": "business_project-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_scrum-master",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_scrum-master",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_scrum-master",
+      "target": "business_technical-writer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_technical-writer",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/technical-writer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_technical-writer",
+      "target": "business_ux-researcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/technical-writer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_technical-writer",
+      "target": "business_sales-engineer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/technical-writer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_technical-writer",
+      "target": "business_customer-success-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/technical-writer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_technical-writer",
+      "target": "business_legal-advisor",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/technical-writer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_ux-researcher",
+      "target": "business_product-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/ux-researcher.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_ux-researcher",
+      "target": "business_content-marketer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/ux-researcher.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_ux-researcher",
+      "target": "business_customer-success-manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/ux-researcher.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_ux-researcher",
+      "target": "business_business-analyst",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/ux-researcher.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_ux-researcher",
+      "target": "business_scrum-master",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/ux-researcher.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_wordpress-master",
+      "target": "business_content-marketer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/wordpress-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_wordpress-master",
+      "target": "agents_backend-specialist",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/wordpress-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "agents_code-reveiw",
+      "target": "agents_backend-specialist",
+      "relation": "references",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.3,
+      "source_file": "agents/code-reveiw.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_vubf_framework",
+      "target": "business_assumption-mapping",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/assumption-mapping.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_rag_systems",
+      "target": "agents_ai-engineer",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_agent_frameworks",
+      "target": "agents_ai-engineer",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_vector_search",
+      "target": "agents_ai-engineer",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_strangler_fig_pattern",
+      "target": "agents_code-archaeologist",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/code-archaeologist.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_chestertons_fence",
+      "target": "agents_code-archaeologist",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/code-archaeologist.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_solid_principles",
+      "target": "agents_code-reveiw",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/code-reveiw.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_growth_loop_design",
+      "target": "business_growth-loops",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_viral_coefficient",
+      "target": "concept_growth_loop_design",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/growth-loops.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_license_frameworks",
+      "target": "business_license-engineer",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_product_frameworks",
+      "target": "business_product-manager",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_scaling_frameworks",
+      "target": "business_scrum-master",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_planning_poker",
+      "target": "business_backlog-grooming",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_ai_writing_detection",
+      "target": "agents_ai-writing-auditor",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/ai-writing-auditor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_layered_architecture",
+      "target": "agents_backend-specialist",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/backend-specialist.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_best_practices_code",
+      "target": "agents_code-reveiw",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/code-reveiw.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_unslop_tool",
+      "target": "business_content-quality-editor",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/content-quality-editor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_definition_of_ready",
+      "target": "business_backlog-grooming",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_quality_gates_content",
+      "target": "business_content-quality-editor",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/content-quality-editor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_rag_systems",
+      "target": "concept_vector_search",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_agent_frameworks",
+      "target": "concept_rag_systems",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agents/ai-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "agents_ai-writing-auditor",
+      "target": "business_content-quality-editor",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agents/ai-writing-auditor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_product-manager",
+      "target": "business_business-analyst",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_scrum-master",
+      "target": "business_project-manager",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/business/scrum-master.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_legal-advisor",
+      "target": "business_license-engineer",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/business/legal-advisor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "agents_code-archaeologist",
+      "target": "agents_code-reveiw",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/code-archaeologist.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "business_customer-success-manager",
+      "target": "business_sales-engineer",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "agents/business/customer-success-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_ai_writing_detection",
+      "target": "concept_unslop_tool",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/ai-writing-auditor.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_product_frameworks",
+      "target": "concept_scaling_frameworks",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "agents/business/product-manager.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "concept_license_frameworks",
+      "target": "business_legal-advisor",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/business/license-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "agile_delivery_cluster",
+      "label": "Agile Delivery Cluster",
+      "nodes": [
+        "business_backlog-grooming",
+        "business_scrum-master",
+        "business_product-manager",
+        "business_project-manager"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/business/backlog-grooming.md"
+    },
+    {
+      "id": "content_quality_pipeline",
+      "label": "Content Quality Pipeline",
+      "nodes": [
+        "agents_ai-writing-auditor",
+        "business_content-quality-editor",
+        "business_content-marketer"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/ai-writing-auditor.md"
+    },
+    {
+      "id": "product_validation_cycle",
+      "label": "Product Validation and Growth Cycle",
+      "nodes": [
+        "business_assumption-mapping",
+        "business_growth-loops",
+        "business_product-manager",
+        "business_ux-researcher"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/business/growth-loops.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

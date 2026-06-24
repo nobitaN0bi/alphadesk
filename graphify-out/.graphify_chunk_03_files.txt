@@ -1,0 +1,16 @@
+/home/nobita/Documents/alphadesk/agents/mobile-developer.md
+/home/nobita/Documents/alphadesk/agents/orchestrator.md
+/home/nobita/Documents/alphadesk/agents/penetration-tester.md
+/home/nobita/Documents/alphadesk/agents/performance-optimizer.md
+/home/nobita/Documents/alphadesk/agents/product-manager.md
+/home/nobita/Documents/alphadesk/agents/product-owner.md
+/home/nobita/Documents/alphadesk/agents/project-planner.md
+/home/nobita/Documents/alphadesk/agents/qa-automation-engineer.md
+/home/nobita/Documents/alphadesk/agents/security-auditor.md
+/home/nobita/Documents/alphadesk/agents/seo-specialist.md
+/home/nobita/Documents/alphadesk/agents/test-engineer.md
+/home/nobita/Documents/alphadesk/agents/ui-designer.md
+/home/nobita/Documents/alphadesk/backend/broker/README.md
+/home/nobita/Documents/alphadesk/frontend/README.md
+/home/nobita/Documents/alphadesk/requirements.txt
+/home/nobita/Documents/alphadesk/webanimation-designer.md

@@ -1,0 +1,1823 @@
+{
+  "nodes": [
+    {
+      "id": "agents_compliance_audtior",
+      "label": "compliance-auditor",
+      "file_type": "code",
+      "source_file": "agents/compliance-audtior.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_content_marketer",
+      "label": "content-marketer",
+      "file_type": "code",
+      "source_file": "agents/content-marketer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_database_architect",
+      "label": "database-architect",
+      "file_type": "code",
+      "source_file": "agents/database-architect.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_debugger",
+      "label": "debugger",
+      "file_type": "code",
+      "source_file": "agents/debugger.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_devops_engineer",
+      "label": "devops-engineer",
+      "file_type": "code",
+      "source_file": "agents/devops-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_documentation_writer",
+      "label": "documentation-writer",
+      "file_type": "code",
+      "source_file": "agents/documentation-writer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_explorer_agent",
+      "label": "explorer-agent",
+      "file_type": "code",
+      "source_file": "agents/explorer-agent.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_fastapibestpractices",
+      "label": "FastAPI Best Practices",
+      "file_type": "document",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_frontend_specialist",
+      "label": "frontend-specialist",
+      "file_type": "code",
+      "source_file": "agents/frontend-specialist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_fullstack_speacialist",
+      "label": "fullstack-developer",
+      "file_type": "code",
+      "source_file": "agents/fullstack-speacialist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_game_developer",
+      "label": "game-developer",
+      "file_type": "code",
+      "source_file": "agents/game-developer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_cloud_architect",
+      "label": "cloud-architect",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_database_administrator",
+      "label": "database-administrator",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/database-administrator.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_deployment_engineer",
+      "label": "deployment-engineer",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_devops_engineer",
+      "label": "devops-engineer (infrastructure)",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_docker_expert",
+      "label": "docker-expert",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_infrastructure_audit_report",
+      "label": "Infrastructure Audit Report",
+      "file_type": "document",
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_kubernetes_specialist",
+      "label": "kubernetes-specialist",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_platform_engineer",
+      "label": "platform-engineer",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_security_engineer",
+      "label": "security-engineer",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_sre_engineer",
+      "label": "sre-engineer",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "agents_infrastructure_terraform_engineer",
+      "label": "terraform-engineer",
+      "file_type": "code",
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_fastapi_project_structure",
+      "label": "FastAPI Project Structure",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 40-98",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_async_routes",
+      "label": "Async Routes (FastAPI)",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 121-215",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_pydantic_models",
+      "label": "Pydantic Models",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 216-335",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_fastapi_dependency_injection",
+      "label": "FastAPI Dependency Injection",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 337-507",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_pydantic_basesettings",
+      "label": "Pydantic BaseSettings",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 284-335",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_sqlalchemy_naming_conventions",
+      "label": "SQLAlchemy Naming Conventions",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 718-733",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_alembic_migrations",
+      "label": "Alembic Migrations",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 735-746",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_ruff_linter",
+      "label": "Ruff Linter",
+      "file_type": "concept",
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 878-892",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_infrastructure_maturity_assessment",
+      "label": "Infrastructure Maturity Assessment",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 8-24",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_platform_polsia",
+      "label": "Polsia Platform",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 1-5",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_platform_deerflow",
+      "label": "DeerFlow Platform",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 1-5",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_platform_krea",
+      "label": "Krea Platform",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 1-5",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_infrastructure_improvement_roadmap",
+      "label": "Infrastructure Improvement Roadmap",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 161-198",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_five_whys_technique",
+      "label": "5 Whys Technique",
+      "file_type": "concept",
+      "source_file": "agents/debugger.md",
+      "source_location": "lines 87-104",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_four_phase_debugging",
+      "label": "4-Phase Debugging Process",
+      "file_type": "concept",
+      "source_file": "agents/debugger.md",
+      "source_location": "lines 23-57",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_game_loop",
+      "label": "Game Loop",
+      "file_type": "concept",
+      "source_file": "agents/game-developer.md",
+      "source_location": "lines 77-84",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_blue_green_deployment",
+      "label": "Blue-Green Deployment",
+      "file_type": "concept",
+      "source_file": "agents/devops-engineer.md",
+      "source_location": "lines 119-126",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_canary_deployment",
+      "label": "Canary Deployment",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 236-244",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_gitops",
+      "label": "GitOps",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 236-244",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_zero_trust_architecture",
+      "label": "Zero-Trust Architecture",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 96-104",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_chaos_engineering",
+      "label": "Chaos Engineering",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 96-104",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_error_budget",
+      "label": "Error Budget",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 46-54",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_multi_stage_docker_builds",
+      "label": "Multi-Stage Docker Builds",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 26-34",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_container_security",
+      "label": "Container Security",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 36-44",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_supply_chain_security",
+      "label": "Supply Chain Security",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 56-64",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_socratic_discovery",
+      "label": "Socratic Discovery Protocol",
+      "file_type": "concept",
+      "source_file": "agents/explorer-agent.md",
+      "source_location": "lines 36-50",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_devsecops",
+      "label": "DevSecOps",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 36-44",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_internal_developer_platform",
+      "label": "Internal Developer Platform",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 26-34",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "concept_golden_paths",
+      "label": "Golden Path Templates",
+      "file_type": "concept",
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 66-74",
+      "source_url": null,
+      "captured_at": "2026-06-25T00:00:00Z",
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents_compliance_audtior",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/compliance-audtior.md",
+      "source_location": "lines 289-299",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_compliance_audtior",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/compliance-audtior.md",
+      "source_location": "lines 289-299",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_compliance_audtior",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "guides",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/compliance-audtior.md",
+      "source_location": "lines 289-299",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_content_marketer",
+      "target": "agents_frontend_specialist",
+      "relation": "collaborates_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/content-marketer.md",
+      "source_location": "lines 300-310",
+      "weight": 0.8
+    },
+    {
+      "source": "agents_database_architect",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/database-architect.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "agents_debugger",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agents/debugger.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "agents_devops_engineer",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "agents/devops-engineer.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "agents_devops_engineer",
+      "target": "agents_infrastructure_deployment_engineer",
+      "relation": "collaborates_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/devops-engineer.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "agents_explorer_agent",
+      "target": "agents_frontend_specialist",
+      "relation": "feeds_into",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/explorer-agent.md",
+      "source_location": "lines 67-73",
+      "weight": 0.8
+    },
+    {
+      "source": "agents_explorer_agent",
+      "target": "agents_debugger",
+      "relation": "feeds_into",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agents/explorer-agent.md",
+      "source_location": "lines 67-73",
+      "weight": 0.8
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_fastapi_project_structure",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 40-98",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_async_routes",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 121-215",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_pydantic_models",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 216-335",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_fastapi_dependency_injection",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 337-507",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_sqlalchemy_naming_conventions",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 718-733",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_alembic_migrations",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 735-746",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_ruff_linter",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 878-892",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fastapibestpractices",
+      "target": "concept_pydantic_basesettings",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/fastapibestpractices.md",
+      "source_location": "lines 284-335",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_database_architect",
+      "target": "concept_sqlalchemy_naming_conventions",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/database-architect.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "agents_database_architect",
+      "target": "concept_alembic_migrations",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agents/database-architect.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "agents_frontend_specialist",
+      "target": "agents_fullstack_speacialist",
+      "relation": "collaborates_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/frontend-specialist.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "agents_fullstack_speacialist",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/fullstack-speacialist.md",
+      "source_location": "lines 244-254",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fullstack_speacialist",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "consults",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/fullstack-speacialist.md",
+      "source_location": "lines 244-254",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_fullstack_speacialist",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/fullstack-speacialist.md",
+      "source_location": "lines 244-254",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "guides",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "guides",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_terraform_engineer",
+      "relation": "guides",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_cloud_architect",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/cloud-architect.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_database_administrator",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/database-administrator.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_database_administrator",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/database-administrator.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_database_administrator",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/database-administrator.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_database_administrator",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/database-administrator.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_database_administrator",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/database-administrator.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "concept_blue_green_deployment",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 246-254",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_deployment_engineer",
+      "target": "concept_canary_deployment",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/deployment-engineer.md",
+      "source_location": "lines 236-244",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_devops_engineer",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_devops_engineer",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_devops_engineer",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_devops_engineer",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_devops_engineer",
+      "target": "concept_gitops",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 236-244",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "concept_multi_stage_docker_builds",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 26-34",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "concept_container_security",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 36-44",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "concept_supply_chain_security",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 56-64",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "concept_platform_polsia",
+      "relation": "assesses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 1-5",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "concept_platform_deerflow",
+      "relation": "assesses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 1-5",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "concept_platform_krea",
+      "relation": "assesses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 1-5",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "concept_infrastructure_maturity_assessment",
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 8-24",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "concept_infrastructure_improvement_roadmap",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 161-198",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 29-39",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_docker_expert",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 41-52",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 54-65",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_deployment_engineer",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 67-78",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 80-91",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 93-104",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 106-118",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 120-131",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 133-144",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "agents_infrastructure_terraform_engineer",
+      "relation": "identifies_gaps_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 146-157",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_kubernetes_specialist",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_kubernetes_specialist",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_kubernetes_specialist",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_kubernetes_specialist",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_kubernetes_specialist",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_kubernetes_specialist",
+      "target": "agents_infrastructure_terraform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/kubernetes-specialist.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "enables",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "concept_internal_developer_platform",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 26-34",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_platform_engineer",
+      "target": "concept_golden_paths",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 66-74",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "guides",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_terraform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 266-275",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "concept_zero_trust_architecture",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 96-104",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_security_engineer",
+      "target": "concept_devsecops",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": "lines 36-44",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "agents_infrastructure_deployment_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "concept_error_budget",
+      "relation": "manages",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 46-54",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_sre_engineer",
+      "target": "concept_chaos_engineering",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": "lines 96-104",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_cloud_architect",
+      "relation": "enables",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_devops_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_security_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_kubernetes_specialist",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_terraform_engineer",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/terraform-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_deployment_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_sre_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_docker_expert",
+      "target": "agents_infrastructure_platform_engineer",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": "lines 267-276",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_devops_engineer",
+      "target": "agents_infrastructure_database_administrator",
+      "relation": "collaborates_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/devops-engineer.md",
+      "source_location": "lines 276-285",
+      "weight": 1.0
+    },
+    {
+      "source": "concept_blue_green_deployment",
+      "target": "concept_canary_deployment",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "agents/devops-engineer.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "concept_multi_stage_docker_builds",
+      "target": "concept_container_security",
+      "relation": "related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/infrastructure/docker-expert.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "concept_devsecops",
+      "target": "concept_zero_trust_architecture",
+      "relation": "related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "agents/infrastructure/security-engineer.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "concept_error_budget",
+      "target": "concept_chaos_engineering",
+      "relation": "related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "agents/infrastructure/sre-engineer.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "concept_internal_developer_platform",
+      "target": "concept_golden_paths",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": "lines 66-74",
+      "weight": 1.0
+    },
+    {
+      "source": "concept_internal_developer_platform",
+      "target": "concept_gitops",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "agents/infrastructure/platform-engineer.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "concept_five_whys_technique",
+      "target": "concept_four_phase_debugging",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/debugger.md",
+      "source_location": "lines 87-104",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_infrastructure_infrastructure_audit_report",
+      "target": "concept_infrastructure_improvement_roadmap",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md",
+      "source_location": "lines 161-198",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyperedge_infrastructure_agents",
+      "label": "Infrastructure Agent Ecosystem",
+      "nodes": [
+        "agents_infrastructure_cloud_architect",
+        "agents_infrastructure_database_administrator",
+        "agents_infrastructure_deployment_engineer",
+        "agents_infrastructure_devops_engineer",
+        "agents_infrastructure_docker_expert",
+        "agents_infrastructure_kubernetes_specialist",
+        "agents_infrastructure_platform_engineer",
+        "agents_infrastructure_security_engineer",
+        "agents_infrastructure_sre_engineer",
+        "agents_infrastructure_terraform_engineer"
+      ],
+      "relation": "forms_ecosystem",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md"
+    },
+    {
+      "id": "hyperedge_quick_wins_sprint",
+      "label": "Sprint 1-2 Quick Wins",
+      "nodes": [
+        "agents_infrastructure_docker_expert",
+        "agents_infrastructure_database_administrator",
+        "agents_infrastructure_security_engineer",
+        "agents_infrastructure_terraform_engineer"
+      ],
+      "relation": "assigned_quick_wins",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "agents/infrastructure/infrastructure-audit-report.md"
+    },
+    {
+      "id": "hyperedge_fastapi_concepts",
+      "label": "FastAPI Best Practice Concepts",
+      "nodes": [
+        "concept_fastapi_project_structure",
+        "concept_async_routes",
+        "concept_pydantic_models",
+        "concept_fastapi_dependency_injection",
+        "concept_pydantic_basesettings",
+        "concept_sqlalchemy_naming_conventions",
+        "concept_alembic_migrations",
+        "concept_ruff_linter"
+      ],
+      "relation": "documents_practices",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "agents/fastapibestpractices.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
