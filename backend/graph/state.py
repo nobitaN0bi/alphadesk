@@ -1,24 +1,43 @@
-"""Shared graph state for AlphaDesk.
+"""Shared graph state for AgentQuant Apex.
 
-Defines ``PortfolioState`` — the single Pydantic model that flows through every
+Defines ``QuantState`` — the single Pydantic v2 model that flows through every
 node of the LangGraph — together with all nested models the agents read from and
-write to. Each agent is a pure function ``(state: PortfolioState) -> PortfolioState``
+write to. Each agent is a pure function ``(state: QuantState) -> QuantState``
 that accretes its output onto the state.
 
+This file is the **evolved** state schema for the AgentQuant Apex migration.
+It supersedes the original ``PortfolioState`` (kept as a backward-compatible
+alias) and merges three lineages:
+
+1.  **AlphaDesk spine** (preserved verbatim) — Scanner, Research, Analyst,
+    RiskManager, Execution agents' input/output models, ``user_query``,
+    ``human_approved`` gate, and the ``rejection_reason`` audit trail.
+2.  **AgentQuant swarm fields** (inherited from
+    ``@temp/AgentQuant/src/agent/swarm/state.py``) — ``RegimeContext``,
+    ``CriticFeedback``, ``swarm_consensus_score`` injected by the new
+    Orchestrator and Critic nodes (Phase 1).
+3.  **QuantDinger execution fields** (inherited from
+    ``@temp/QuantDinger/backend_api_python/app/services/live_trading/``) —
+    ``available_margin``, ``current_holdings``, ``DhanOrder`` payloads with
+    ``security_id`` + ``correlation_id`` for idempotent live placement.
+
 Field semantics tie back to the guardrails in CLAUDE.md: analyst confidence must
-reach 0.70 to proceed, no more than 3 stocks per sector, and any watchlist write
-requires ``human_approved`` to be True.
+reach 0.70 to proceed, no more than 3 stocks per sector, any user_watchlist
+write requires ``human_approved = True``, and any live broker order requires
+both ``human_approved = True`` AND a successful ``portfolio_sync`` snapshot
+of ``available_margin`` and ``current_holdings``.
 """
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
 
 # --------------------------------------------------------------------------- #
-# Scanner output
+# Scanner output (preserved)
 # --------------------------------------------------------------------------- #
 class ScanResult(BaseModel):
     """A single candidate surfaced by the Scanner agent."""
@@ -47,7 +66,7 @@ class ScanResult(BaseModel):
 
 
 # --------------------------------------------------------------------------- #
-# Research output
+# Research output (preserved)
 # --------------------------------------------------------------------------- #
 class ResearchReport(BaseModel):
     """Deep-dive findings produced by the Research agent for one candidate."""
@@ -73,7 +92,7 @@ class ResearchReport(BaseModel):
 
 
 # --------------------------------------------------------------------------- #
-# Analyst output
+# Analyst output (preserved)
 # --------------------------------------------------------------------------- #
 class AnalystRecommendation(BaseModel):
     """Structured recommendation written by the Analyst agent."""
@@ -114,7 +133,7 @@ class AnalystRecommendation(BaseModel):
 
 
 # --------------------------------------------------------------------------- #
-# Risk output
+# Risk output (preserved)
 # --------------------------------------------------------------------------- #
 class RiskAssessment(BaseModel):
     """RiskManager verdict on a single recommendation (pure logic on state)."""
@@ -146,13 +165,179 @@ class RiskAssessment(BaseModel):
     notes: Optional[str] = Field(
         None, description="Human-readable explanation of the verdict."
     )
+    # --- Phase 2 additions (AgentQuant Apex) ---
+    proposed_quantity: Optional[int] = Field(
+        None,
+        description=(
+            "Quantity sized by the RiskManager's quantitative sizing engine. "
+            "Only populated when decision in (PASS, FLAG) and a live price was available."
+        ),
+    )
+    proposed_price: Optional[float] = Field(
+        None,
+        description="Limit price (rounded) the RiskManager recommends for the order.",
+    )
+    required_margin: Optional[float] = Field(
+        None,
+        description="Notional capital required for ``proposed_quantity`` x ``proposed_price``.",
+    )
 
 
 # --------------------------------------------------------------------------- #
-# Execution input
+# NEW (AgentQuant Apex) — Regime + Critic swarm fields
+# --------------------------------------------------------------------------- #
+RegimeLabel = Literal[
+    "LowVol-Bull",
+    "LowVol-Bear",
+    "HighVol-Bull",
+    "HighVol-Bear",
+    "Crisis",
+    "Unknown",
+]
+
+
+class RegimeContext(BaseModel):
+    """Market regime snapshot produced by the Orchestrator (Phase 1, AgentQuant lineage)."""
+
+    label: RegimeLabel = Field(..., description="6-class regime label.")
+    confidence: float = Field(
+        ..., ge=0.0, le=1.0, description="Confidence in the regime label (0-1)."
+    )
+    narrative: str = Field(..., description="One-paragraph explanation of the regime.")
+    nifty_momentum_pct: Optional[float] = Field(
+        None,
+        description="3-month NIFTY 50 momentum used as the regime's trend proxy.",
+    )
+    india_vix_proxy: Optional[float] = Field(
+        None,
+        description="Synthetic India VIX proxy derived from IND Money mover volatility.",
+    )
+    detected_at: datetime = Field(
+        default_factory=lambda: datetime.now(timezone.utc),
+        description="UTC timestamp of regime detection.",
+    )
+
+
+class CriticFeedback(BaseModel):
+    """LLM-as-judge verdict from the Critic node (Phase 1, AgentQuant lineage)."""
+
+    symbol: str = Field(..., description="NSE ticker being reviewed.")
+    approved: bool = Field(
+        ..., description="True if the critic does not veto the recommendation."
+    )
+    reason: str = Field(..., description="Plain-English reasoning for the verdict.")
+    risk_score: float = Field(
+        ...,
+        ge=0.0,
+        le=1.0,
+        description="Critic's risk score; higher = more dangerous given the regime.",
+    )
+
+
+# --------------------------------------------------------------------------- #
+# NEW (AgentQuant Apex) — QuantDinger execution lineage
+# --------------------------------------------------------------------------- #
+OrderSide = Literal["BUY", "SELL"]
+OrderKind = Literal["MARKET", "LIMIT"]
+ProductType = Literal["CNC", "INTRADAY", "MARGIN"]
+OrderValidity = Literal["DAY", "IOC"]
+OrderStatus = Literal[
+    "PENDING", "PLACED", "EXECUTED", "REJECTED", "FAILED", "CANCELLED"
+]
+
+
+class DhanOrder(BaseModel):
+    """Typed live-order payload for the Dhan HQ adapter.
+
+    Replaces the lightweight ``PendingAction`` for the live-execution path.
+    Inherits fields from the @temp/transormation.md PRD and the Dhan HQ REST
+    schema. ``correlation_id`` is the idempotency key — re-submitting the same
+    correlation id will NOT place a duplicate order.
+    """
+
+    symbol: str = Field(..., description="NSE trading symbol, e.g. 'RELIANCE'.")
+    security_id: str = Field(
+        ...,
+        description=(
+            "Dhan-assigned NSE securityId resolved via security_id_mapper. "
+            "NEVER fabricated — execution will reject if missing."
+        ),
+    )
+    quantity: int = Field(..., gt=0, description="Whole-share quantity to trade.")
+    price: float = Field(
+        0.0,
+        ge=0.0,
+        description="Limit price (0 for MARKET orders).",
+    )
+    order_type: OrderKind = Field("LIMIT", description="MARKET or LIMIT.")
+    transaction_type: OrderSide = Field("BUY", description="BUY or SELL.")
+    product_type: ProductType = Field("CNC", description="CNC (delivery), INTRADAY, or MARGIN.")
+    validity: OrderValidity = Field("DAY", description="DAY or IOC.")
+    exchange_segment: Literal["NSE_EQ", "BSE_EQ", "NSE_FO"] = Field(
+        "NSE_EQ", description="Exchange segment — NSE cash equity by default."
+    )
+    correlation_id: str = Field(
+        ...,
+        description=(
+            "Idempotency key. Dhan's dhanOrderCorrelationId. "
+            "Format: 'q-' + 12 hex chars; reused on graph resume to prevent duplicate orders."
+        ),
+    )
+    dhan_order_id: Optional[str] = Field(
+        None, description="Dhan-assigned order id, populated after a successful placement."
+    )
+    status: OrderStatus = Field(
+        "PENDING", description="Lifecycle status of the order."
+    )
+    rejection_reason: Optional[str] = Field(
+        None, description="Broker-supplied or adapter-supplied rejection reason."
+    )
+    placed_at: Optional[datetime] = Field(
+        None, description="UTC timestamp of successful placement."
+    )
+    executed_at: Optional[datetime] = Field(
+        None, description="UTC timestamp of fill (status=EXECUTED)."
+    )
+    filled_quantity: Optional[int] = Field(
+        None, description="Filled quantity (may be < quantity for partial fills)."
+    )
+    average_price: Optional[float] = Field(
+        None, description="Average execution price across all fills."
+    )
+
+    # --- Analytics fields, populated by the Monitor node after execution ---
+    regime_at_placement: Optional[RegimeLabel] = Field(
+        None, description="Regime label at the moment of placement (post-trade analytics)."
+    )
+    critic_risk_score: Optional[float] = Field(
+        None, description="Critic risk score at the moment of placement."
+    )
+
+
+class Holding(BaseModel):
+    """Live portfolio position (mirrors Dhan's /holdings payload)."""
+
+    symbol: str = Field(..., description="NSE trading symbol.")
+    security_id: Optional[str] = Field(None, description="Dhan securityId for the position.")
+    quantity: int = Field(..., description="Current share quantity held.")
+    avg_price: float = Field(..., description="Average buy price across all lots.")
+    current_price: float = Field(..., description="Last traded price at snapshot time.")
+    pnl: float = Field(..., description="Unrealised P&L in absolute INR.")
+    pnl_pct: float = Field(..., description="Unrealised P&L as a percentage of cost basis.")
+    day_change_pct: float = Field(0.0, description="Intraday move (%).")
+    sector: Optional[str] = Field(None, description="Sector for downstream analytics.")
+
+
+# --------------------------------------------------------------------------- #
+# Legacy compatibility — keep PendingAction as a thin alias
 # --------------------------------------------------------------------------- #
 class PendingAction(BaseModel):
-    """An action awaiting the human-in-the-loop gate before the Execution agent runs it."""
+    """Legacy action object (paper-watchlist era).
+
+    Retained for backward compatibility with the existing Execution agent and
+    the paper-trading path when ``BROKER=`` is unset. New live-execution code
+    must use :class:`DhanOrder` instead.
+    """
 
     action_type: Literal["add_to_watchlist", "place_order"] = Field(
         ..., description="What the Execution agent will do once approved."
@@ -174,11 +359,28 @@ class PendingAction(BaseModel):
 
 
 # --------------------------------------------------------------------------- #
-# Top-level graph state
+# Top-level graph state (EVOLVED)
 # --------------------------------------------------------------------------- #
-class PortfolioState(BaseModel):
-    """Single shared state object threaded through every node of the LangGraph."""
+class QuantState(BaseModel):
+    """Single shared state object threaded through every node of the LangGraph.
 
+    Evolution from ``PortfolioState`` (preserved as alias below):
+
+    - **Additive** — every original field is preserved with identical semantics.
+    - **Swarm fields** — ``regime_context``, ``critic_feedback``,
+      ``swarm_consensus_score`` populated by the new Orchestrator and Critic nodes.
+    - **Execution fields** — ``available_margin``, ``current_holdings``,
+      ``pending_actions`` (now ``DhanOrder``), ``executed_trades`` (new), plus
+      explicit ``place_live_orders`` toggle so the same state can drive both
+      paper and live execution paths.
+
+    Backward compat: ``pending_actions`` and ``approved_actions`` now hold
+    ``DhanOrder`` instances instead of ``PendingAction``. Code that consumed
+    ``PendingAction`` must be updated (the existing execution.py evolves in
+    Phase 2.4).
+    """
+
+    # --- AlphaDesk spine (preserved verbatim) ---
     user_query: str = Field(
         ..., description="Natural-language research request that kicked off the run."
     )
@@ -195,21 +397,7 @@ class PortfolioState(BaseModel):
     risk_assessments: List[RiskAssessment] = Field(
         default_factory=list, description="RiskManager verdicts on the recommendations."
     )
-    pending_actions: List[PendingAction] = Field(
-        default_factory=list,
-        description="Actions queued for the human-in-the-loop gate / Execution agent.",
-    )
-    approved_actions: List[PendingAction] = Field(
-        default_factory=list,
-        description=(
-            "Actions promoted from pending_actions after human_approved=True. "
-            "When no broker is configured, they stop here (no live order is placed)."
-        ),
-    )
-    execution_history: List[PendingAction] = Field(
-        default_factory=list,
-        description="Audit trail of actions the Execution agent has processed (executed or persisted).",
-    )
+    # --- legacy paper-watchlist plumbing (kept for backward compat) ---
     paper_watchlist: List[str] = Field(
         default_factory=list,
         description=(
@@ -217,6 +405,8 @@ class PortfolioState(BaseModel):
             "Not connected to any brokerage; the read-only IND Money MCP cannot modify real watchlists."
         ),
     )
+
+    # --- Human-in-the-loop gate (preserved) ---
     human_approved: bool = Field(
         False,
         description="Set True by the human gate; required before any user_watchlist write.",
@@ -224,3 +414,79 @@ class PortfolioState(BaseModel):
     rejection_reason: Optional[str] = Field(
         None, description="Reason supplied by the human when approval is withheld."
     )
+
+    # --- NEW (Phase 1): AgentQuant swarm fields ---
+    regime_context: Optional[RegimeContext] = Field(
+        None, description="Market regime produced by the Orchestrator node before Scanner."
+    )
+    critic_feedback: List[CriticFeedback] = Field(
+        default_factory=list,
+        description="Per-symbol vetoes from the Critic node (inserted between Analyst and RiskManager).",
+    )
+    swarm_consensus_score: float = Field(
+        0.0,
+        ge=0.0,
+        le=1.0,
+        description=(
+            "Aggregate confidence that the swarm agrees on the recommendations. "
+            "Below 0.5 the Execution path is downgraded to paper/watchlist only."
+        ),
+    )
+
+    # --- NEW (Phase 2): QuantDinger execution lineage ---
+    available_margin: float = Field(
+        0.0,
+        description=(
+            "Available cash margin (INR) from Dhan's /fundlimit endpoint. "
+            "Populated by the PortfolioSync node at the start of every run."
+        ),
+    )
+    used_margin: float = Field(
+        0.0,
+        description="Margin currently deployed (INR) computed from current_holdings.",
+    )
+    current_holdings: List[Holding] = Field(
+        default_factory=list,
+        description="Live positions from Dhan's /holdings endpoint, snapshot at run start.",
+    )
+    portfolio_synced_at: Optional[datetime] = Field(
+        None,
+        description="UTC timestamp of the last successful PortfolioSync. Stale snapshots invalidate sizing.",
+    )
+    place_live_orders: bool = Field(
+        False,
+        description=(
+            "Master switch for live execution. True only when BROKER=dhan env is set AND "
+            "human_approved=True AND the user has explicitly opted in via the ApprovalModal."
+        ),
+    )
+
+    # --- Pending + approved + execution-history queues ---
+    pending_actions: List[DhanOrder] = Field(
+        default_factory=list,
+        description=(
+            "Live orders staged by the RiskManager sizing engine, awaiting "
+            "human_approved=True before placement."
+        ),
+    )
+    approved_actions: List[DhanOrder] = Field(
+        default_factory=list,
+        description=(
+            "Live orders promoted from pending_actions after human_approved=True. "
+            "Once the broker reports EXECUTED, they move to executed_trades."
+        ),
+    )
+    execution_history: List[DhanOrder] = Field(
+        default_factory=list,
+        description="Append-only audit trail of every order the Execution agent has processed.",
+    )
+    executed_trades: List[DhanOrder] = Field(
+        default_factory=list,
+        description="Filled orders (Dhan status=EXECUTED), used by the Monitor node for reconciliation.",
+    )
+
+
+# --------------------------------------------------------------------------- #
+# Backward-compatible alias — every legacy import keeps working.
+# --------------------------------------------------------------------------- #
+PortfolioState = QuantState  # type: ignore[misc,assignment]

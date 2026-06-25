@@ -19,9 +19,10 @@ on via env (LANGCHAIN_TRACING_V2); it is never disabled here.
 from __future__ import annotations
 
 import json
+import logging
 import uuid
 from datetime import datetime, timezone
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -33,8 +34,11 @@ from pydantic import BaseModel, Field
 # before the graph and agents read them.
 load_dotenv()
 
+from broker.base import load_broker  # noqa: E402
 from graph.graph import alphaDesk_graph, resume_after_approval  # noqa: E402
 from graph.state import PortfolioState  # noqa: E402
+
+logger = logging.getLogger("alphadesk.api")
 
 app = FastAPI(title="AlphaDesk", version="0.1.0")
 
@@ -271,6 +275,96 @@ async def get_watchlist() -> Dict[str, Any]:
     return {"count": len(items), "items": items}
 
 
+# --------------------------------------------------------------------------- #
+# AgentQuant Apex — Phase 3.1 / 3.2 (NEW)
+# --------------------------------------------------------------------------- #
+@app.get("/portfolio")
+async def get_portfolio() -> Dict[str, Any]:
+    """Live Dhan portfolio snapshot for the LivePortfolio frontend panel.
+
+    Returns the most recent ``QuantState`` fields populated by the
+    PortfolioSync node. When no run has synced yet (or no broker is
+    configured), returns zeroed defaults with ``place_live_orders=False``
+    so the frontend renders a benign empty state.
+    """
+    broker = load_broker()
+    if broker is None:
+        return {
+            "available_margin": 0.0,
+            "used_margin": 0.0,
+            "current_holdings": [],
+            "portfolio_synced_at": None,
+            "place_live_orders": False,
+            "regime_label": None,
+            "regime_confidence": None,
+            "swarm_consensus_score": None,
+        }
+    try:
+        funds = float(await broker.get_funds() or 0.0)
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("/portfolio: get_funds failed: %s", exc)
+        funds = 0.0
+    try:
+        raw_holdings = await broker.get_holdings() or []
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("/portfolio: get_holdings failed: %s", exc)
+        raw_holdings = []
+
+    holdings = []
+    for h in raw_holdings:
+        try:
+            sym = h.get("tradingSymbol") or h.get("symbol")
+            qty = int(h.get("totalQty") or h.get("quantity") or 0)
+            avg = float(h.get("avgCostPrice") or h.get("averagePrice") or 0.0)
+            ltp = float(h.get("ltp") or h.get("lastTradedPrice") or 0.0)
+            if not sym or qty <= 0 or avg <= 0 or ltp <= 0:
+                continue
+            invested = qty * avg
+            current = qty * ltp
+            pnl = current - invested
+            pnl_pct = (pnl / invested) * 100.0 if invested else 0.0
+            holdings.append({
+                "symbol": sym,
+                "security_id": str(h.get("securityId")) if h.get("securityId") else None,
+                "quantity": qty,
+                "average_price": round(avg, 2),
+                "last_traded_price": round(ltp, 2),
+                "pnl": round(pnl, 2),
+                "pnl_pct": round(pnl_pct, 3),
+                "day_change_pct": float(h.get("dayChangePercentage") or 0.0),
+            })
+        except Exception:  # noqa: BLE001
+            continue
+    return {
+        "available_margin": funds,
+        "used_margin": round(sum(h["average_price"] * h["quantity"] for h in holdings), 2),
+        "current_holdings": holdings,
+        "portfolio_synced_at": _now_iso(),
+        "place_live_orders": True,
+        "regime_label": None,
+        "regime_confidence": None,
+        "swarm_consensus_score": None,
+    }
+
+
+@app.get("/orders/{run_id}")
+async def get_orders_for_run(run_id: str) -> Dict[str, Any]:
+    """Return the pending + executed orders for a specific run.
+
+    Used by the ExecutionLogs panel to show the live order timeline.
+    """
+    config = _thread_config(run_id)
+    snapshot = await alphaDesk_graph.aget_state(config)
+    state = _state_dict(snapshot)
+    return {
+        "run_id": run_id,
+        "pending_actions": state.get("pending_actions", []),
+        "approved_actions": state.get("approved_actions", []),
+        "executed_trades": state.get("executed_trades", []),
+        "execution_history": state.get("execution_history", []),
+    }
+
+
 @app.delete("/watchlist/{symbol}")
 async def remove_from_watchlist(symbol: str) -> Dict[str, Any]:
     """Remove a symbol from the paper watchlist."""
@@ -296,3 +390,5 @@ async def status(run_id: str) -> Dict[str, Any]:
         "next": next_nodes,
         "state": _state_dict(snapshot),
     }
+
+
