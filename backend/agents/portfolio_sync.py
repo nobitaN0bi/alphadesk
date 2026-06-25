@@ -81,10 +81,8 @@ def _holdings_from_dhan(raw: list) -> List[Holding]:
                 symbol=sym,
                 security_id=str(h.get("securityId", "")) or None,
                 quantity=qty,
-                average_price=avg,
-                last_traded_price=ltp,
-                invested_value=round(invested, 2),
-                current_value=round(current, 2),
+                avg_price=avg,
+                current_price=ltp,
                 pnl=round(pnl, 2),
                 pnl_pct=round(pnl_pct, 3),
                 day_change_pct=float(h.get("dayChangePct", 0.0)) if h.get("dayChangePct") is not None else 0.0,
@@ -146,7 +144,7 @@ async def portfolio_sync(state: QuantState) -> QuantState:
         raw_holdings = await broker.get_holdings()
         state.current_holdings = _holdings_from_dhan(raw_holdings)
         state.used_margin = round(
-            sum(h.invested_value for h in state.current_holdings), 2
+            sum(h.quantity * h.avg_price for h in state.current_holdings), 2
         )
     except Exception as exc:  # noqa: BLE001
         logger.warning("portfolio_sync: get_holdings failed (%s); empty list", exc)

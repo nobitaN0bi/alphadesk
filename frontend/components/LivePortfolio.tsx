@@ -34,10 +34,8 @@ export interface Holding {
   symbol: string;
   security_id?: string | null;
   quantity: number;
-  average_price: number;
-  last_traded_price: number;
-  invested_value: number;
-  current_value: number;
+  avg_price: number;
+  current_price: number;
   pnl: number;
   pnl_pct: number;
   day_change_pct: number;
@@ -108,11 +106,11 @@ export function LivePortfolio({
 
   // ---- Derived KPIs ----
   const deployedNotional = useMemo(
-    () => snap?.current_holdings.reduce((s, h) => s + h.invested_value, 0) ?? 0,
+    () => snap?.current_holdings.reduce((s, h) => s + h.quantity * h.avg_price, 0) ?? 0,
     [snap]
   );
   const currentNotional = useMemo(
-    () => snap?.current_holdings.reduce((s, h) => s + h.current_value, 0) ?? 0,
+    () => snap?.current_holdings.reduce((s, h) => s + h.quantity * h.current_price, 0) ?? 0,
     [snap]
   );
   const totalPnl = currentNotional - deployedNotional;
@@ -241,10 +239,10 @@ export function LivePortfolio({
                     {h.quantity.toLocaleString("en-IN")}
                   </td>
                   <td className="px-4 py-2 text-right text-zinc-400">
-                    {inr(h.average_price, 2)}
+                    {inr(h.avg_price, 2)}
                   </td>
                   <td className="px-4 py-2 text-right text-zinc-300">
-                    {inr(h.last_traded_price, 2)}
+                    {inr(h.current_price, 2)}
                   </td>
                   <td
                     className={`px-4 py-2 text-right ${

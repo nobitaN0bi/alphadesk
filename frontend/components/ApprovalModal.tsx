@@ -187,8 +187,9 @@ export function ApprovalModal({
   const [step, setStep] = useState<"review" | "confirm">("review");
 
   // Aggregate capital impact across the staged orders. We pull per-symbol
-  // quantity and limit price from the risk manager's sized_order when present,
-  // otherwise fall back to a 1-share placeholder so the original flow works.
+  // quantity and limit price from the risk manager's proposed_quantity/
+  // proposed_price fields (Phase 2.3 sizing), otherwise fall back to a
+  // 1-share placeholder so the original flow works.
   const aggregated = useMemo(() => {
     let totalNotional = 0;
     const rows: {
@@ -199,19 +200,12 @@ export function ApprovalModal({
       correlationId?: string;
     }[] = [];
     for (const { rec, risk } of items) {
-      const sized = risk?.sized_order;
-      const qty =
-        sized?.quantity && sized.quantity > 0
-          ? sized.quantity
-          : risk?.proposed_quantity && risk.proposed_quantity > 0
-            ? risk.proposed_quantity
-            : 1; // paper fallback
-      const price =
-        sized?.price && sized.price > 0
-          ? sized.price
-          : risk?.proposed_price && risk.proposed_price > 0
-            ? risk.proposed_price
-            : 0;
+      const qty = risk?.proposed_quantity && risk.proposed_quantity > 0
+        ? risk.proposed_quantity
+        : 1; // paper fallback
+      const price = risk?.proposed_price && risk.proposed_price > 0
+        ? risk.proposed_price
+        : 0;
       const notional = qty * price;
       totalNotional += notional;
       rows.push({
@@ -219,7 +213,7 @@ export function ApprovalModal({
         qty,
         price,
         notional,
-        correlationId: sized?.correlation_id,
+        correlationId: undefined, // not available in RiskAssessment
       });
     }
     return { totalNotional, rows };
@@ -295,7 +289,6 @@ export function ApprovalModal({
 
             <div className="max-h-64 space-y-1.5 overflow-y-auto">
               {items.map(({ rec, risk }) => {
-                const sized = risk?.sized_order;
                 const row = aggregated.rows.find((r) => r.symbol === rec.symbol);
                 return (
                   <div

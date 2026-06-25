@@ -327,8 +327,8 @@ async def get_portfolio() -> Dict[str, Any]:
                 "symbol": sym,
                 "security_id": str(h.get("securityId")) if h.get("securityId") else None,
                 "quantity": qty,
-                "average_price": round(avg, 2),
-                "last_traded_price": round(ltp, 2),
+                "avg_price": round(avg, 2),
+                "current_price": round(ltp, 2),
                 "pnl": round(pnl, 2),
                 "pnl_pct": round(pnl_pct, 3),
                 "day_change_pct": float(h.get("dayChangePercentage") or 0.0),
@@ -337,7 +337,7 @@ async def get_portfolio() -> Dict[str, Any]:
             continue
     return {
         "available_margin": funds,
-        "used_margin": round(sum(h["average_price"] * h["quantity"] for h in holdings), 2),
+        "used_margin": round(sum(h["avg_price"] * h["quantity"] for h in holdings), 2),
         "current_holdings": holdings,
         "portfolio_synced_at": _now_iso(),
         "place_live_orders": True,

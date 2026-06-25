@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import logging
 import os
+import uuid
 from datetime import datetime, timezone
 from typing import List, Optional
 
@@ -63,12 +64,24 @@ def _stage_pending(state: QuantState) -> QuantState:
         # approved. FLAG is a caution badge, not a separate gate.
         if not assessment.approved or assessment.symbol in existing:
             continue
-        # If the risk manager already attached a sized DhanOrder, use it.
-        sized: Optional[DhanOrder] = (
-            assessment.sized_order if hasattr(assessment, "sized_order") else None
-        )
-        if sized is not None:
-            state.pending_actions.append(sized)
+        # If the risk manager already sized this order (Phase 2.3), build
+        # a DhanOrder from the sizing fields.
+        if assessment.proposed_quantity and assessment.proposed_price:
+            state.pending_actions.append(
+                DhanOrder(
+                    symbol=assessment.symbol,
+                    security_id="",  # resolved at execution time via SecurityIdMapper
+                    quantity=assessment.proposed_quantity,
+                    price=assessment.proposed_price,
+                    order_type="LIMIT",
+                    transaction_type="BUY",
+                    product_type="CNC",
+                    validity="DAY",
+                    exchange_segment="NSE_EQ",
+                    correlation_id=f"q-{uuid.uuid4().hex[:12]}",
+                    status="PENDING",
+                )
+            )
         else:
             # Fallback: create a 1-share placeholder so the legacy
             # paper-watchlist flow keeps working. No live order will be

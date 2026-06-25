@@ -12,7 +12,7 @@ Phase 2.3 evolution — quantitative sizing engine:
 After the verdict is determined (PASS / FLAG / REJECT), the risk manager now
 *also* computes an exact position size for every approved recommendation
 when live portfolio state is available. The sized orders are attached to the
-corresponding ``RiskAssessment.sized_order`` (a :class:`DhanOrder` payload)
+corresponding ``RiskAssessment.proposed_quantity`` / ``proposed_price`` fields
 and queued onto ``state.pending_actions`` so the human-in-the-loop gate can
 display the exact capital impact in the frontend.
 
@@ -91,8 +91,8 @@ def _last_price_map(state: QuantState) -> Dict[str, float]:
         if s.last_price is not None and s.last_price > 0:
             prices[s.symbol] = s.last_price
     for h in state.current_holdings:
-        if h.last_traded_price and h.last_traded_price > 0:
-            prices.setdefault(h.symbol, h.last_traded_price)
+        if h.current_price and h.current_price > 0:
+            prices.setdefault(h.symbol, h.current_price)
     return prices
 
 
@@ -262,11 +262,11 @@ def _summarize_rejection(assessments: List[RiskAssessment]) -> str:
 async def risk_manager(state: QuantState) -> QuantState:
     """Populate ``state.risk_assessments``, ``state.rejection_reason``, and size approved orders.
 
-    Phase 2.3 additions: every approved assessment now also gets a
-    ``sized_order`` (a :class:`DhanOrder` payload) computed from the live
-    ``available_margin`` and last-traded price. The sized orders are queued
-    onto ``state.pending_actions`` so the HiTL gate can show them in the
-    ApprovalModal with the exact capital impact.
+    Phase 2.3 additions: every approved assessment now also gets
+    ``proposed_quantity`` and ``proposed_price`` (a :class:`DhanOrder` payload)
+    computed from the live ``available_margin`` and last-traded price. The sized
+    orders are queued onto ``state.pending_actions`` so the HiTL gate can show
+    them in the ApprovalModal with the exact capital impact.
     """
     sectors = _sector_map(state)
     prices = _last_price_map(state)
@@ -302,7 +302,6 @@ async def risk_manager(state: QuantState) -> QuantState:
             # Sizing was not possible (no price / no margin / exposure cap).
             # We still mark the assessment approved but without a sized order.
             continue
-        assessment.sized_order = order
         assessment.proposed_quantity = order.quantity
         assessment.proposed_price = order.price
         assessment.required_margin = round(order.quantity * order.price, 2)

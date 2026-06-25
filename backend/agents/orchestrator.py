@@ -94,7 +94,7 @@ def _heuristic_regime(nifty_mom: float, vix_proxy: float) -> RegimeLabel:
 # Mock market-data fetch (in production this calls IND Money /external feed)
 # --------------------------------------------------------------------------- #
 async def _fetch_market_snapshot() -> tuple[float, float]:
-    """Return ``(nifty_3m_momentum_pct, india_vix_proxy_pct)``.
+    """Return ``(nifty_momentum_pct, india_vix_proxy_pct)``.
 
     Until the IND Money MCP exposes a NIFTY/India VIX endpoint, this returns a
     conservative neutral default: 0 % momentum, 18 % VIX proxy. Production
@@ -144,8 +144,8 @@ async def orchestrator(state: QuantState) -> QuantState:
         label=verdict.label,
         confidence=verdict.confidence,
         narrative=verdict.narrative,
-        nifty_realised_vol_pct=verdict.india_vix_proxy,
-        nifty_3m_momentum_pct=verdict.nifty_momentum_pct,
+        india_vix_proxy=verdict.india_vix_proxy,
+        nifty_momentum_pct=verdict.nifty_momentum_pct,
     )
     state.swarm_consensus_score = verdict.swarm_consensus_score
 
