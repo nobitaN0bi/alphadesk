@@ -1,14 +1,14 @@
-# Individual Contribution — Nobita Nobi
+# Individual Contribution — Priyanshu Baul Majumder
 
 > **Git Identity**: Baul <63050204+nobitaN0bi@users.noreply.github.com>  
-> **Commits**: Co-authored "Enhance PortfolioState model with detailed class definitions and descriptions"  
-> **Primary Focus**: System architecture, state design, frontend architecture, RAG evaluation, knowledge graph analysis, and project documentation
+> **Commits**: Co-authored "Enhance PortfolioState model with detailed class definitions and descriptions" + AgentQuant Apex migration commits  
+> **Primary Focus**: Systems architecture, state design, live execution engine, swarm orchestration, frontend architecture, RAG evaluation, knowledge graph analysis, and project documentation
 
 ---
 
 ## My Role in AlphaDesk
 
-I served as the **systems architect and documentation lead** for AlphaDesk, responsible for designing the shared state schema that enables five autonomous agents to collaborate, building the frontend architecture for real-time agent visualization, evaluating the RAG pipeline for financial grounding, and creating the comprehensive documentation that transforms the codebase into a demo-ready capstone project. While Ishan focused on agent implementation and backend integration, my work ensured the system was coherent, observable, and explainable.
+I served as the **systems architect and live execution lead** for AlphaDesk, responsible for designing the shared state schema that enables five autonomous agents to collaborate, building the frontend architecture for real-time agent visualization, evaluating the RAG pipeline for financial grounding, creating the comprehensive documentation that transforms the codebase into a demo-ready capstone project, and leading the **AgentQuant Apex migration** — a production-grade evolution that added live Dhan broker execution, market regime detection, swarm orchestration, and quantitative position sizing. While Ishan focused on agent implementation and backend integration, my work ensured the system was coherent, observable, explainable, and ready for real capital deployment.
 
 ---
 
@@ -171,10 +171,73 @@ function usePipelineStatus(runId: string) {
 
 ---
 
-## How My Work Connects to the Full System
+## Contribution 7: AgentQuant Apex Migration — Live Execution + Swarm Orchestration
 
-My contributions form the **coherence layer** of AlphaDesk. The PortfolioState model enables five agents to collaborate without data loss. The frontend architecture makes the system's reasoning transparent to users. The RAG evaluation proves the system works empirically. The knowledge graph analysis reveals architectural patterns invisible in raw code. The documentation transforms the project from a prototype into a presentation-ready capstone. Without these contributions, the system would function but would not be explainable, observable, or demo-ready.
+I led the **AgentQuant Apex migration**, the most significant architectural evolution of AlphaDesk since its inception. This migration transformed a paper-trading research prototype into a production-grade live execution system with market regime awareness, swarm consensus, and quantitative position sizing. The migration was executed in three phases across 16 files (2,809 insertions, 177 deletions) with zero regression to existing agents.
+
+### Phase 1: State Machine & Swarm Evolution
+
+I evolved `PortfolioState` into `QuantState` — an additive migration that preserved every existing field while introducing three new lineages:
+
+1. **AlphaDesk spine** (preserved verbatim) — Scanner, Research, Analyst, RiskManager, Execution agents' input/output models
+2. **AgentQuant swarm fields** — `RegimeContext`, `CriticFeedback`, `swarm_consensus_score` injected by new Orchestrator and Critic nodes
+3. **QuantDinger execution fields** — `available_margin`, `current_holdings`, `DhanOrder` payloads with `security_id` + `correlation_id` for idempotent live placement
+
+I designed the **Orchestrator agent** that detects market regimes (LowVol-Bull, LowVol-Bear, HighVol-Bull, HighVol-Bear, Crisis, Unknown) using NIFTY 50 momentum and India VIX proxy, with LLM-based classification falling back to heuristic rules when the LLM is unavailable. The Orchestrator also enforces a swarm admission floor — hostile regimes automatically downgrade the pipeline to paper mode.
+
+I built the **Critic agent** as an LLM-as-judge between the Analyst and RiskManager, reviewing each recommendation against the detected regime and live portfolio context. The Critic issues per-symbol vetoes with risk scores that can block trades in hostile regimes.
+
+I created the **PortfolioSync agent** that snapshots the live Dhan account (available margin, current holdings) before the Scanner runs, ensuring the sizing engine has real capital context.
+
+I refactored `graph.py` into an 8-node topology with `SqliteSaver` persistence for graph resume capability.
+
+### Phase 2: Fintech-Grade Execution Engine
+
+I implemented the **DhanBroker** adapter (14KB) with three production hardening patterns:
+- **Token-bucket rate limiter** (10 req/s default) — Dhan enforces strict per-second quotas
+- **3-strike circuit breaker** with exponential backoff (60s → 300s) — protects the pipeline from cascading failures
+- **Idempotent order placement** via `correlation_id` — re-submitting the same id returns the existing order, never duplicates
+
+I built the **SecurityIdMapper** — a lazy JSON cache with Dhan instruments refresh that resolves NSE symbols to Dhan securityIds. It never fabricates IDs; raises `SecurityIdNotFoundError` on miss.
+
+I evolved the **RiskManager** into a quantitative sizing engine:
+- 1% risk per trade, 20% max per position, 80% total exposure cap
+- LIMIT orders at last_price × 1.01 (1% above market) for safety
+- Deterministic `correlation_id` per-run for idempotent resume
+
+I evolved the **Execution agent** for idempotent order placement:
+- Checks for existing Dhan order with same `correlation_id` before placing
+- Resolves `security_id` via SecurityIdMapper
+- Never throws on broker failure — marks order REJECTED with broker's message
+
+### Phase 3: Tech-Luxe Frontend Terminal
+
+I designed and built **LivePortfolio.tsx** — an obsidian + monospace terminal panel with:
+- 4-column KPI grid (Available Margin, Deployed, Unrealised P&L, Positions)
+- Holdings table with color-coded P&L and day change
+- 5-second polling, regime pill display
+
+I upgraded **ApprovalModal.tsx** to a two-step confirmation flow:
+- Step 1: Capital Impact review (Required/Available/Utilization)
+- Step 2: Deliberate EXECUTE button (red for live, emerald for paper)
+- Per-order breakdown with symbol, qty, limit price, notional
+
+I added `/portfolio` and `/orders/{run_id}` backend endpoints to `api/main.py`.
+
+### Key Guarantees
+
+- `correlation_id` on every order → re-submitting never duplicates
+- `SqliteSaver` checkpointer → graph resume from interrupt preserves in-flight state
+- `security_id` resolved via deterministic mapper → never fabricated
+- 3-strike circuit breaker with exponential backoff → pipeline stays alive when Dhan degrades
+- Critic vetoes + regime gate → automated downgrade to paper mode in hostile regimes (Crisis, HighVol-Bear)
 
 ---
 
-*Nobita Nobi · AlphaDesk Capstone Project · June 2026*
+## How My Work Connects to the Full System
+
+My contributions form the **coherence layer and live execution backbone** of AlphaDesk. The PortfolioState/QuantState model enables five agents to collaborate without data loss, and now carries regime context, critic feedback, and live execution payloads. The frontend architecture makes the system's reasoning transparent to users and now displays real-time portfolio data from Dhan. The RAG evaluation proves the system works empirically. The knowledge graph analysis reveals architectural patterns invisible in raw code. The AgentQuant Apex migration transforms the project from a paper-trading prototype into a production-ready live execution system. The documentation transforms the project from a prototype into a presentation-ready capstone. Without these contributions, the system would function but would not be explainable, observable, demo-ready, or capable of handling real capital.
+
+---
+
+*Priyanshu Baul Majumder · AlphaDesk Capstone Project · June 2026*
